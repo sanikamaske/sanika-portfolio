@@ -961,7 +961,79 @@ footer {
 
 <!-- AI BOT -->
 <div class="bot-widget">
+<!-- SanikaBot Widget -->
+<div class="bot-widget">
+    <div class="bot-button" onclick="toggleBot()">
+        🤖
+    </div>
 
+    <!-- Green box me text aur heading -->
+    <div class="bot-popup" id="botPopup">
+        <div class="bot-header">
+            <h3>SanikaBot</h3>
+            <span class="close-btn" onclick="toggleBot()">✕</span>
+        </div>
+        <div class="bot-body">
+            <p>Hi! How can I help you today?</p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Bot Container Box Style */
+.bot-popup {
+    display: none; /* Default hidden */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 240px;
+    background-color: #0b1a13; /* Dark background */
+    border: 2px solid #00f2be; /* Green outline */
+    border-radius: 12px;
+    padding: 12px;
+    color: #ffffff; /* White text color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.bot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00f2be;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.bot-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #00f2be; /* Green heading color */
+}
+
+.close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.bot-body p {
+    margin: 0;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+</style>
+
+<script>
+function toggleBot() {
+    const popup = document.getElementById('botPopup');
+    if (popup.style.display === 'none' || popup.style.display === '') {
+        popup.style.display = 'block';
+    } else {
+        popup.style.display = 'none';
+    }
+}
+</script>
     <div
         class="bot-button"
         onclick="toggleBot()">
